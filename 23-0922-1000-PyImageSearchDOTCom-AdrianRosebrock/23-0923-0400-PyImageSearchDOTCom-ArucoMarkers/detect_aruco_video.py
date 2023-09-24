@@ -85,6 +85,7 @@ elif args["video_mode"] == "VideoStream":
 	###jwc UsbCam Logitechc922 14-15fps but more drops to 5 once in a while (10%)
 	###jwc CsiCam Landzo 15-16fps but fewer drops to 5 once in a while (10%)
 	###jwc y vs = VideoStream(src=0,resolution=(320, 240)).start()
+	#jwc 'VideoStream: h,w' should be in sync w/ 'imutils.resize: h,w' :)+
 	vs = VideoStream(src=0, usePiCamera=True, resolution=(320, 240), framerate=60).start()
 	time.sleep(2.0)
 
@@ -106,6 +107,7 @@ while True:
 	###jwc yy same fps for CsiCam_Lanzo_PiCamClone
 	###jwc yy frame = imutils.resize(frame, width=320)
 	###jwc yyy 19-20fps with 'height' added and now h,w in sync w/ above 'VideoStream' :)+
+	#jwc 'VideoStream: h,w' should be in sync w/ 'imutils.resize: h,w' :)+
 	frame = imutils.resize(frame, height=320, width=240)
 
  	# detect ArUco markers in the input frame

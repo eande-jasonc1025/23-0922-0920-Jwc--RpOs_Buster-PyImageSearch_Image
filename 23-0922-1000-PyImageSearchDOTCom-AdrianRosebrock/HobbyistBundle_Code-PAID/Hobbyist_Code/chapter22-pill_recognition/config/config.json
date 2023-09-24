@@ -1,0 +1,17 @@
+{
+	// define the size of the pill measurement area (in millimeters)
+	"measurement_area_size": 100,
+
+	// define the path to our pill database
+	"db_path": "db.pickle",
+
+	// when identifying pills we can weight the size, shape, color, and
+	// texture components differently, ultimately leading to a more
+	// accurate pill identification
+	"weights": {
+		"size": 0.5,
+		"shape": 0.3,
+		"color": 0.1,
+		"texture": 0.1
+	}
+}

@@ -22,9 +22,10 @@ def fpsCount():
 # initialize the video stream and allow the cammera sensor to warmup
 print("[INFO] starting video stream...")
 # jwc UsbCam
-vs = VideoStream(src=0).start()
+###jwc y vs = VideoStream(src=0).start()
 # jwc pi_camera
 ###jwc o vs = VideoStream(usePiCamera=True, resolution=(640, 480)).start()
+vs = VideoStream(usePiCamera=True, resolution=(640, 480)).start()
 time.sleep(2.0)
 
 # loop over the frames from the video stream
